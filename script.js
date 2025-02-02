@@ -1,9 +1,9 @@
+<script>
 let currentSlide = 0;
 
 function showSlide(index) {
     const slides = document.querySelectorAll('.image-slide');
-    const indicators = document.querySelectorAll('.indicator');
-
+    
     if (index >= slides.length) {
         currentSlide = 0; // Loop back to first slide
     } else if (index < 0) {
@@ -14,14 +14,18 @@ function showSlide(index) {
 
     slides.forEach((slide, i) => {
         slide.style.display = (i === currentSlide) ? 'block' : 'none';
-        indicators[i].classList.toggle('active', i === currentSlide);
     });
+}
+
+function changeSlide(n) {
+    showSlide(currentSlide + n);
 }
 
 // Initialize the first slide
 showSlide(currentSlide);
 
-// Optional: Automatically change slides every few seconds
+// Set an interval to change the slide every 3 seconds
 setInterval(() => {
-    showSlide(currentSlide + 1);
-}, 3000); // Change slide every 3 seconds
+    changeSlide(1); // Automatically go to the next slide
+}, 3000); // 3000 milliseconds = 3 seconds
+</script>
