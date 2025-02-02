@@ -6,6 +6,20 @@
     <title>Gaming World</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let slideIndex = 0;
+            const slides = document.querySelectorAll(".carousel img");
+            function showSlides() {
+                slides.forEach((slide, index) => {
+                    slide.style.display = index === slideIndex ? "block" : "none";
+                });
+                slideIndex = (slideIndex + 1) % slides.length;
+                setTimeout(showSlides, 3000);
+            }
+            showSlides();
+        });
+    </script>
 </head>
 <body>
 
@@ -25,18 +39,51 @@
     </nav>
 </header>
 
+<div class="carousel">
+    <img src="https://getwallpapers.com/wallpaper/full/0/7/c/1469677-top-1920x1080-gaming-wallpapers-1920x1080.jpg">
+    <img src="https://wallpaperaccess.com/full/740792.jpg">
+    <img src="https://wallpaperaccess.com/full/644677.jpg">
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming World</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <img src="logo.jpeg" alt="Logo" class="logo">
+        <ul>
+            <form action="#" class="search-form">
+                <input type="text" placeholder="Search games">
+                <button type="submit">Search</button>
+            </form>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#games">Games</a></li>
+            <li><a href="#subscriptions">Subscriptions</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+</header>
+
 <div class="welcome-section">
     <h1>GET READY TO WITNESS 3D GAMING</h1>
     <div class="image-container">
-        <img class="image-slide" src="https://static2.srcdn.com/wordpress/wp-content/uploads/2021/06/combined-images-of-the-main-characters-in-GTA-5-and-Half-Life-2-and-Big-Daddy-in-Bioshock.jpg" alt="GTA 5, Half-Life 2, and BioShock Characters">
-        <img class="image-slide" src="https://i0.wp.com/www.gamesbap.com/wp-content/uploads/2020/04/Wolfstein-Youngblood.jpg?resize=1366%2C768&ssl=1" alt="Wolfenstein Youngblood" style="display:none;">
+        <img class="image-slide" src="http://hdqwalls.com/wallpapers/spiderman-ps4-2018-e3-5q.jpg" alt="GTA 5, Half-Life 2, and BioShock Characters">
+        <img class="image-slide" src="http://hdqwalls.com/wallpapers/spiderman-ps4-2018-e3-5q.jpg" alt="Wolfenstein Youngblood" style="display:none;">
     </div>
     <div class="scroll-indicators">
         <span class="indicator" onclick="showSlide(0)"></span>
         <span class="indicator" onclick="showSlide(1)"></span>
     </div>
 </div>
-
 <section id="home" class="hero-section">
     <div class="hero-content">
         <div class="image-container">
@@ -185,7 +232,6 @@
                 We plan to set up multiple 3D games on PCs and TVs.
             </div>
         </div>
-
         <div class="faq-item">
             <input type="checkbox" id="faq4">
             <label for="faq4" class="faq-question">What is our mission?</label>
@@ -205,7 +251,7 @@
                 <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
-                <li><a href="#"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BHakfQ5OWRV%2BYVf6OuenG%2FA%3D%3D"><i class="fab fa-linkedin-in"></i> LinkedIn</a></li>
             </ul>
         </div>
     </div>
